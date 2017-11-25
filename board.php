@@ -17,7 +17,11 @@
 		$name = $_SESSION['name'];    
 	  if (!empty($_POST['comment']) && empty($_POST['edit_num']) ) {
 	    $d = date('Y/m/d H:i:s');
-	    $sql = "INSERT INTO `chat` (`name`, `comment`, `password`, `created_at`) VALUES (\"{$_SESSION['name']}\",\"{$_POST['comment']}\",\"{$_POST['password']}\", \"{$d}\");";
+	    if ($_POST['tokumei']=="on") {
+		    $sql = "INSERT INTO `chat` (`name`, `comment`, `password`, `created_at`) VALUES (\"匿名\",\"{$_POST['comment']}\",\"{$_POST['password']}\", \"{$d}\");";
+	    }else{
+		    $sql = "INSERT INTO `chat` (`name`, `comment`, `password`, `created_at`) VALUES (\"{$_SESSION['name']}\",\"{$_POST['comment']}\",\"{$_POST['password']}\", \"{$d}\");";	    	
+	    }
 	    //print_r($_FILES);
 	    if (!empty($_FILES["file"])) {
 	    	//echo "ファイル添付されてる";
@@ -206,7 +210,8 @@
 			  <div class="form-group">
 			    <input type="text" name="comment" class="form-control" value="" placeholder="コメント">
 			  </div>
-<!-- 			  <div class="form-group">
+			<input type="checkbox" name="tokumei" />学籍番号を公開しない
+			  <!-- 			  <div class="form-group">
 			    <input type="password" name="password" class="form-control" value="" placeholder="パスワード（オプション）">
 			  </div>
  -->			  <div class="input-group">
