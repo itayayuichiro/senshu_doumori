@@ -34,20 +34,19 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>入力フォーム</title>
+	<title>【専修大学限定】どう森掲示板</title>
 	<link rel="stylesheet" href="./bootstrap.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 <body>
 <div class="container">
-	<h1>【専大限定】<br>掲示板</h1>
+	<h2>【専大限定】<br>どう森掲示板	<img src="./leaf.png" alt="" width="10px"></h2>
 		    <form action="./login.php" method="post" accept-charset="utf-8">
 		        学籍番号：<input type="text"  class="form-control" name="login_id" value="" placeholder=""><br>
 		        パスワード：<input type="password"  class="form-control" name="login_pass" value="" placeholder=""><br>
 		        <button type="submit" class="btn btn-primary">ログイン</button>
 		    </form>
-		    <a href="./new.php">新規登録</a>
 		   
   </div>
 </body>
