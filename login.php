@@ -41,8 +41,7 @@
 </head>
 <body>
 <div class="container">
-	<h1>簡易掲示板</h1>
-			<h1>ログインしてください</h1>
+	<h1>【専大限定】掲示板</h1>
 		    <form action="./login.php" method="post" accept-charset="utf-8">
 		        学籍番号：<input type="text"  class="form-control" name="login_id" value="" placeholder=""><br>
 		        パスワード：<input type="password"  class="form-control" name="login_pass" value="" placeholder=""><br>
